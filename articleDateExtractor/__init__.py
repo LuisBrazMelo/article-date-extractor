@@ -224,7 +224,7 @@ def extractArticlePublishedDate(articleLink, html = None):
 
         if html is None:
             headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0","Connection":"close","Accept-Language":"en-US,en;q=0.5","Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8","Upgrade-Insecure-Requests":"1"}
-            response = session.get(URL, headers=headers, timeout=15, verify=False)
+            response = session.get(articleLink, headers=headers, timeout=15, verify=False)
             html = response.text
             #request = urllib.Request(articleLink)
             # Using a browser user agent, decreases the change of sites blocking this request - just a suggestion
